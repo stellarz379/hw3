@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="{% url 'index' %}"><li>Главное</li></a>
+                <a href="{% url 'about' %}"><li> О нас</li></a>
+                <a href="{% url 'contact' %}"><li> контакты</li></a>
+                <a href="{% url 'news' %}"><li> новости</li></a>
+                <a href="{% url 'time' %}"><li> Текущие время</li></a>
+
+
+            </ul>
+        </nav>
+    </header>
+    <h1>{{title}}</h1>
+    <p>{{news}}</p>
+    {% for news in news %}
+        <p>{{news}}</p>
+    {% endfor %}
+</body>
+</html>
